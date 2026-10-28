@@ -6,10 +6,11 @@ const COLS = [
     title: 'Mua sắm',
     links: [
       ['Đầm & Váy', '/shop?category=dam-vay'],
-      ['Áo sơ mi', '/shop?category=ao-so-mi'],
+      ['Áo thun & Hoodie', '/shop?category=ao-thun-hoodie'],
       ['Túi xách', '/shop?category=tui-xach'],
-      ['Giày', '/shop?category=giay-cao-got'],
+      ['Giày nữ', '/shop?category=giay-cao-got'],
       ['Đồng hồ', '/shop?category=dong-ho'],
+      ['Nước hoa', '/shop?category=nuoc-hoa'],
     ],
   },
   {
@@ -34,9 +35,17 @@ export default function Footer() {
             đồng hồ cơ tinh xảo.
           </p>
           <ul className="mt-6 space-y-2 text-sm">
-            <li className="flex items-center gap-2"><MapPin size={16} className="text-gold-light" /> 12 Nguyễn Huệ, Quận 1, TP.HCM</li>
-            <li className="flex items-center gap-2"><Phone size={16} className="text-gold-light" /> 1900 6868</li>
-            <li className="flex items-center gap-2"><Mail size={16} className="text-gold-light" /> hello@luxe.vn</li>
+            <li className="flex items-center gap-2"><MapPin size={16} className="text-gold-light" /> 123 abc, Đà Nẵng</li>
+            <li>
+              <a href="tel:0123456789" className="flex items-center gap-2 transition hover:text-gold-light">
+                <Phone size={16} className="text-gold-light" /> 0123456789
+              </a>
+            </li>
+            <li>
+              <a href="mailto:quocanh@luxe.vn" className="flex items-center gap-2 transition hover:text-gold-light">
+                <Mail size={16} className="text-gold-light" /> quocanh@luxe.vn
+              </a>
+            </li>
           </ul>
         </div>
         {COLS.map((c) => (
@@ -54,7 +63,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-4 py-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} LUXE Fashion Store. Deploy bằng Docker trên AWS EC2.</p>
+          <p data-testid="copyright">© 2026 Bản quyền thuộc về LUXE Fashion.</p>
           <div className="flex gap-4">
             <Facebook size={18} className="hover:text-white" />
             <Instagram size={18} className="hover:text-white" />

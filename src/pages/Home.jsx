@@ -47,7 +47,7 @@ function Hero() {
           </div>
           <dl className="relative mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
             {[
-              ['45+', 'Mẫu tuyển chọn'],
+              ['100+', 'Mẫu tuyển chọn'],
               ['4.6★', 'Đánh giá trung bình'],
               ['24h', 'Giao nhanh nội thành'],
             ].map(([n, l]) => (
@@ -123,9 +123,9 @@ function Categories() {
           Xem tất cả <ArrowRight size={16} />
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         {loading
-          ? Array.from({ length: 8 }, (_, i) => <div key={i} className="aspect-square animate-pulse rounded-3xl bg-black/5" />)
+          ? Array.from({ length: 10 }, (_, i) => <div key={i} className="aspect-square animate-pulse rounded-3xl bg-black/5" />)
           : data?.categories.map((c) => (
               <Link
                 key={c.id}

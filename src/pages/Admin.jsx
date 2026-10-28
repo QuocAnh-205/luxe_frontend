@@ -225,7 +225,7 @@ function ProductForm({ initial, categories, onClose, onSaved }) {
 }
 
 function AdminProducts() {
-  const { data, loading, error, reload } = useAdmin('/products?limit=60&sort=newest');
+  const { data, loading, error, reload } = useAdmin('/products?limit=200&sort=newest');
   const { data: catData } = useAdmin('/categories');
   const { toast } = useStore();
   const [editing, setEditing] = useState(null);
