@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+  --color-ink: #111111;
+  --color-cream: #f7f4ef;
+  --color-sand: #ede7dd;
+  --color-gold: #b8925a;
+  --color-gold-light: #e7c98f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-gold-light text-ink;
+  }
+}
+
+/* Tailwind v4: class tự định nghĩa dùng @utility để @apply được và dùng chung với variant (hover:, md:...) */
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-dark {
+  @apply btn bg-ink text-white hover:bg-black/80;
+}
+@utility btn-light {
+  @apply btn bg-white text-ink ring-1 ring-black/10 hover:ring-black/40;
+}
+@utility btn-gold {
+  @apply btn bg-gold-light text-ink hover:bg-gold hover:text-white;
+}
+@utility input {
+  @apply w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-black/35 focus:border-ink focus:ring-4 focus:ring-black/5;
+}
+@utility eyebrow {
+  @apply text-xs font-semibold tracking-[0.25em] text-gold uppercase;
+}
+@utility product-bg {
+  background: radial-gradient(circle at 50% 40%, #ffffff 0%, #efebe4 75%);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
