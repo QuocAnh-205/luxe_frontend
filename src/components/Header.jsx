@@ -48,8 +48,9 @@ export default function Header() {
         Miễn phí giao hàng cho đơn từ <span className="font-semibold text-gold-light">1.000.000₫</span> · Đổi trả 30 ngày
       </div>
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
-          scrolled ? 'bg-cream/85 shadow-[0_1px_0_rgba(0,0,0,0.06)] backdrop-blur-xl' : 'bg-cream'
+        // Nền trắng + viền dưới để tách khỏi nền kem của thân trang; cuộn xuống thì đổ bóng
+        className={`sticky top-0 z-40 border-b border-black/[0.08] transition-shadow duration-300 ${
+          scrolled ? 'bg-white/95 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl' : 'bg-white'
         }`}
       >
         <div className="container-x flex h-16 items-center gap-4 lg:h-20">

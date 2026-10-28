@@ -9,7 +9,7 @@ import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import { Login, Register } from './pages/Auth';
+import { ForgotPassword, Login, Register } from './pages/Auth';
 import Orders from './pages/Orders';
 import NotFound from './pages/NotFound';
 import Admin from './pages/Admin';
@@ -37,6 +37,7 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/admin/*" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
