@@ -1,0 +1,12 @@
+# Commit từ Windows: ép các file chạy trên Linux/EC2 dùng LF.
+# CRLF làm bash báo lỗi "$'\r': command not found" và nginx/SQL đọc sai.
+* text=auto
+*.sh       text eol=lf
+*.sql      text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.template text eol=lf
+*.conf     text eol=lf
+Dockerfile text eol=lf
+.env*      text eol=lf
+*.ps1      text eol=crlf
