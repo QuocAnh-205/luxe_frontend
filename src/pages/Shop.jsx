@@ -169,7 +169,7 @@ export default function Shop() {
 
       <div className="grid gap-10 lg:grid-cols-[240px_1fr]">
         <aside className="hidden lg:block">
-          <div className="sticky top-28">
+          <div className="sticky top-36">
             <Filters params={params} set={set} categories={catData?.categories} />
           </div>
         </aside>
